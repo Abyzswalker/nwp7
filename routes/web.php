@@ -12,15 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('blog.index');
+})->name('/');
+
+
+Route::get('/about', function () {
+    return view('blog.index');
+})->name('about');
+
 
 Route::get('/post', function () {
-    return view('post');
-})->name('post')->middleware('auth');;
+    return view('blog.index');
+})->name('post');
 
-Route::get('/about', 'AboutController@index')->name('about');
 
-Auth::routes();
+Route::get('/contact', function () {
+    return view('blog.index');
+})->name('contact');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+
