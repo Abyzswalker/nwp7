@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class aboutController extends Controller
 {
     public function index(){
-        return view('about');
+        return view('about')->with('description', 'Moderna - О нас')
+            ->with('title', 'Moderna - О нас');
     }
 }
